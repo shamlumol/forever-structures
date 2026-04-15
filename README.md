@@ -1,7 +1,5 @@
 # Forever Structures - Luxury Resort Construction Website
 
-![Forever Structures](https://github.com/YOUR_USERNAME/forever-structures/blob/main/public/og-image.jpg?raw=true)
-
 ## Project Overview
 
 A premium, fully responsive website for **Forever Structures** - a luxury resort construction and real estate development company based in Vagamon, Kerala. The website showcases their portfolio, services, and projects with modern animations and interactive features.
