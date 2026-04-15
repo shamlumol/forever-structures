@@ -1,0 +1,250 @@
+@import '../styles/custom.scss';
+
+.contact-premium {
+  padding: 5rem 0;
+  background: $navy;
+
+  // Contact Info
+
+  
+  .contact-info {
+    margin-bottom: 2rem;
+    
+    @media (min-width: 992px) {
+      padding-right: 2rem;
+      margin-bottom: 0;
+    }
+
+    .info-intro {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      line-height: 1.6;
+      color: rgba($card-white, 0.8);
+      margin-bottom: 2.5rem;
+    }
+
+    // Contact Details
+    .info-details {
+      margin-bottom: 2.5rem;
+
+      .info-item {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem 0;
+        border-bottom: 1px solid rgba($card-white, 0.1);
+        transition: all 0.3s ease;
+        cursor: default;
+
+        .item-icon {
+          width: 40px;
+          height: 40px;
+          background: rgba($blue-grey, 0.2);
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: $orange;
+          flex-shrink: 0;
+          transition: all 0.3s ease;
+        }
+
+        .item-text {
+          flex: 1;
+
+          .item-label {
+            display: block;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 0.75rem;
+            color: rgba($card-white, 0.5);
+            margin-bottom: 0.2rem;
+            letter-spacing: 1px;
+          }
+
+          .item-value {
+            display: block;
+            font-size: 1rem;
+            color: $card-white;
+          }
+        }
+
+        &:hover {
+          border-bottom-color: $orange;
+
+          .item-icon {
+            background: rgba($orange, 0.2);
+            transform: rotate(360deg);
+          }
+        }
+      }
+    }
+
+    // Business Hours
+    .info-hours {
+      padding: 1.8rem;
+      background: rgba($blue-grey, 0.08);
+      border-radius: 20px;
+      border: 1px solid rgba($orange, 0.1);
+
+      h4 {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.2rem;
+        color: $card-white;
+        margin-bottom: 1.2rem;
+      }
+
+      .hours-grid {
+        .hours-item {
+          display: flex;
+          flex-direction: column;
+          gap: 0.3rem;
+          padding: 0.8rem 0;
+          color: rgba($card-white, 0.6);
+          font-size: 0.9rem;
+          
+          @media (min-width: 576px) {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+          }
+
+          &:not(:last-child) {
+            border-bottom: 1px solid rgba($card-white, 0.05);
+          }
+        }
+      }
+    }
+  }
+
+  //  for clickable links
+.contact-info {
+  .info-details {
+    .info-item {
+      .item-text {
+        .item-value-link {
+          color: $card-white;
+          text-decoration: none;
+          transition: all 0.3s ease;
+          display: inline-block;
+          
+          &:hover {
+            color: $orange;
+            transform: translateX(3px);
+          }
+        }
+        
+        .item-value {
+          color: rgba($card-white, 0.8);
+        }
+      }
+    }
+  }
+}
+
+// For phone numbers 
+.info-item .item-icon {
+  color: $orange;
+}
+
+// For email - underline on hover
+.item-value-link[href^="mailto"]:hover {
+  text-decoration: underline;
+}
+
+// For phone numbers
+.item-value-link[href^="tel"]:hover {
+  text-decoration: underline;
+}
+
+  // Contact Form
+  .contact-form {
+    padding: 2.5rem;
+    background: rgba($blue-grey, 0.08);
+    border: 1px solid rgba($orange, 0.1);
+    border-radius: 20px;
+    
+    @media (min-width: 768px) {
+      padding: 3rem;
+    }
+
+    h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      color: $card-white;
+      margin-bottom: 2rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+
+      .form-label {
+        color: rgba($card-white, 0.7);
+        font-size: 0.9rem;
+        margin-bottom: 0.4rem;
+        font-weight: 500;
+      }
+
+      .form-control {
+        background: rgba($card-white, 0.05);
+        border: 1px solid rgba($orange, 0.15);
+        border-radius: 12px;
+        padding: 0.8rem 1.2rem;
+        color: $card-white;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+
+        &:focus {
+          background: rgba($card-white, 0.08);
+          border-color: $orange;
+          box-shadow: 0 0 0 2px rgba($orange, 0.1);
+        }
+
+        &::placeholder {
+          color: rgba($card-white, 0.3);
+          font-size: 0.95rem;
+        }
+      }
+      
+      textarea.form-control {
+        resize: vertical;
+        min-height: 120px;
+      }
+    }
+
+    .submit-btn {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      background: $orange;
+      border: none;
+      padding: 1rem;
+      border-radius: 12px;
+      color: $navy;
+      font-weight: 600;
+      font-size: 1rem;
+       // cursor: pointer;
+
+      transition: all 0.3s ease;
+      margin-top: 0.5rem;
+
+      .btn-arrow {
+        transition: transform 0.3s ease;
+      }
+
+      &:hover:not(:disabled) {
+        background: lighten($orange, 8%);
+        
+        .btn-arrow {
+          transform: translateX(5px);
+        }
+      }
+
+      &:disabled {
+        opacity: 0.7;
+        cursor: not-allowed;
+      }
+    }
+  }
+}

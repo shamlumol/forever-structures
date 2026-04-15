@@ -1,0 +1,319 @@
+@import '../styles/custom.scss';
+
+.navbar-premium {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 20px 0;
+  transition: all 0.4s ease;
+  background: transparent;
+
+  // Optional: Add subtle dark overlay when scrolled
+  &.scrolled {
+    background: rgba($navy, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 12px 0;
+  }
+
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  // Logo Section
+  .navbar-logo {
+    display: flex;
+    align-items: center;
+    // gap: 100000px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    .logo-image {
+      height: 65px;
+      width: auto;
+      transition: all 0.3s ease;
+
+      @media (max-width: 768px) {
+        height: 35px;
+      }
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.2;
+
+      .logo-forever {
+        font-family: 'Playfair Display', serif;
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        color: $card-white;
+
+        @media (max-width: 768px) {
+          font-size: 1rem;
+        }
+      }
+
+      .logo-structures {
+        font-family: 'Playfair Display', serif;
+        font-size: 0.7rem;
+        font-weight: 400;
+        letter-spacing: 3px;
+        color: $orange;
+
+        @media (max-width: 768px) {
+          font-size: 0.6rem;
+          letter-spacing: 2px;
+        }
+      }
+    }
+  }
+
+  // Desktop Navigation Links
+  .navbar-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+
+    @media (max-width: 992px) {
+      display: none;
+    }
+
+    .nav-link {
+      background: none;
+      border: none;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+      color: $card-white;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
+      padding: 5px 0;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%) scaleX(0);
+        width: 30px;
+        height: 2px;
+        background: $orange;
+        transition: transform 0.3s ease;
+      }
+
+      &:hover::after,
+      &.active::after {
+        transform: translateX(-50%) scaleX(1);
+      }
+
+      &:hover {
+        color: $orange;
+      }
+
+      &.active {
+        color: $orange;
+      }
+    }
+  }
+
+  // Mobile Menu Button
+  .mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1001;
+
+    @media (max-width: 992px) {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    span {
+      display: block;
+      width: 25px;
+      height: 2px;
+      background: $card-white;
+      transition: all 0.3s ease;
+      border-radius: 2px;
+    }
+
+    &.open span:first-child {
+      transform: rotate(45deg) translate(5px, 6px);
+    }
+
+    &.open span:last-child {
+      transform: rotate(-45deg) translate(5px, -6px);
+    }
+  }
+}
+
+// Mobile Menu Overlay
+.mobile-menu-premium {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  max-width: 400px;
+  height: 100vh;
+  background: $navy;
+  z-index: 2000;
+  transition: right 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  box-shadow: -5px 0 30px rgba(0, 0, 0, 0.3);
+
+  &.open {
+    right: 0;
+  }
+
+  .mobile-menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    border-bottom: 1px solid rgba($orange, 0.2);
+
+    .mobile-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: $card-white;
+      letter-spacing: 2px;
+
+      .mobile-logo-image {
+        height: 35px;
+        width: auto;
+      }
+    }
+
+    .mobile-close {
+      background: none;
+      border: none;
+      font-size: 2rem;
+      color: $card-white;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      line-height: 1;
+
+      &:hover {
+        color: $orange;
+        transform: rotate(90deg);
+      }
+    }
+  }
+
+  .mobile-menu-links {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1.5rem;
+    gap: 1rem;
+
+    .mobile-nav-link {
+      background: none;
+      border: none;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: 500;
+      color: $card-white;
+      text-align: left;
+      padding: 0.8rem 0;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      opacity: 0;
+      transform: translateX(-20px);
+      animation: slideIn 0.4s ease forwards;
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: $orange;
+        transition: width 0.3s ease;
+      }
+
+      &:hover {
+        color: $orange;
+        padding-left: 10px;
+
+        &::after {
+          width: 30px;
+        }
+      }
+    }
+  }
+
+  .mobile-menu-footer {
+    padding: 1.5rem;
+    border-top: 1px solid rgba($orange, 0.2);
+    text-align: center;
+
+    p {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.8rem;
+      color: rgba($card-white, 0.6);
+      margin: 0.3rem 0;
+    }
+  }
+}
+
+// Animation
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+// Responsive
+@media (max-width: 576px) {
+  .navbar-premium {
+    padding: 15px 0;
+
+    &.scrolled {
+      padding: 10px 0;
+    }
+
+    .navbar-logo {
+      .logo-image {
+        height: 30px;
+      }
+
+      .logo-text {
+        .logo-forever {
+          font-size: 0.85rem;
+        }
+
+        .logo-structures {
+          font-size: 0.5rem;
+          letter-spacing: 1px;
+        }
+      }
+    }
+  }
+
+  .mobile-menu-premium {
+    max-width: 100%;
+
+    .mobile-menu-links .mobile-nav-link {
+      font-size: 1.2rem;
+    }
+  }
+}

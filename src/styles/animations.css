@@ -1,0 +1,94 @@
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1) !important;
+}
+
+.hover-scale {
+  transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+.project-card {
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.project-card:hover img {
+  transform: scale(1.1) !important;
+}
+
+.project-card .hover-overlay {
+  background-color: rgba(58, 38, 16, 0.8);
+  transition: opacity 0.3s ease;
+}
+
+.project-card:hover .hover-overlay {
+  opacity: 1 !important;
+}
+
+.nav-link-custom {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-link-custom::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  width: 80%;
+  height: 2px;
+  background-color: #A7B89E;
+  transition: transform 0.3s ease;
+}
+
+.nav-link-custom:hover::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+/* Section padding */
+.py-6 {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.py-xl-8 {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+/* Loading animation */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.loading-shimmer {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 1000px 100%;
+  animation: shimmer 2s infinite linear;
+}
+
+/* Scroll animations */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

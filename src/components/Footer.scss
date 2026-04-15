@@ -1,0 +1,258 @@
+@import '../styles/custom.scss';
+
+.footer-premium {
+  background: $navy;
+  color: $card-white;
+  padding: 60px 0 30px;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, $orange, transparent);
+  }
+
+  .footer-top {
+    margin-bottom: 40px;
+  }
+
+  // Brand Section
+  .footer-brand {
+    .brand-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      
+      span {
+        color: $orange;
+        font-weight: 400;
+        font-style: italic;
+      }
+    }
+    
+    .brand-tagline {
+      color: rgba($card-white, 0.6);
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+  }
+
+  // Footer Title
+  .footer-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: $orange;
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 40px;
+      height: 2px;
+      background: $orange;
+    }
+  }
+
+  // Quick Links
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+    li {
+      margin-bottom: 0.8rem;
+      
+      .footer-link-btn {
+        background: none;
+        border: none;
+        color: rgba($card-white, 0.7);
+        cursor: pointer;
+        font-size: 0.95rem;
+        transition: all 0.3s ease;
+        padding: 0;
+        
+        &:hover {
+          color: $orange;
+          transform: translateX(5px);
+        }
+      }
+    }
+  }
+
+  // Social Icons
+  .social-icons {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    
+    .social-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      width: 40px;
+      height: 40px;
+      background: rgba($card-white, 0.1);
+      border-radius: 50%;
+      color: $card-white;
+      font-size: 1.2rem;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      position: relative;
+      
+      .social-label {
+        position: absolute;
+        bottom: -25px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 0.7rem;
+        white-space: nowrap;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        background: $orange;
+        padding: 2px 8px;
+        border-radius: 12px;
+        color: $navy;
+      }
+      
+      &:hover {
+        transform: translateY(-5px);
+        background: var(--hover-color);
+        color: white;
+        
+        .social-label {
+          opacity: 1;
+          visibility: visible;
+          bottom: -30px;
+        }
+      }
+    }
+  }
+
+  // Contact Info
+  .contact-info-footer {
+    margin-top: 1.5rem;
+    
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      margin-bottom: 0.8rem;
+      font-size: 0.85rem;
+      color: rgba($card-white, 0.7);
+      
+
+      a {
+        color: rgba($card-white, 0.7);
+        text-decoration: none;
+        transition: color 0.3s ease;
+        
+        &:hover {
+          color: $orange;
+        }
+      }
+    }
+  }
+
+  // Footer Bottom
+  .footer-bottom {
+    text-align: center;
+    padding-top: 30px;
+    margin-top: 20px;
+    
+    .footer-line {
+      width: 60px;
+      height: 2px;
+      background: $orange;
+      margin: 0 auto 20px;
+    }
+    
+    // Back to Top Button in Footer
+    .back-to-top-footer {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.8rem;
+      background: rgba($orange, 0.15);
+      border: 1px solid rgba($orange, 0.3);
+      color: $orange;
+      padding: 10px 24px;
+      border-radius: 50px;
+      cursor: pointer;
+      font-size: 0.85rem;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      margin-bottom: 20px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      
+
+      
+      &:hover {
+        background: $orange;
+        color: $navy;
+        transform: translateY(-3px);
+        
+
+      }
+    }
+    
+    .copyright {
+      color: rgba($card-white, 0.4);
+      font-size: 0.8rem;
+      margin: 0;
+    }
+  }
+}
+
+// Responsive
+@media (max-width: 768px) {
+  .footer-premium {
+    padding: 40px 0 20px;
+    
+    .footer-top {
+      text-align: center;
+    }
+    
+    .footer-title {
+      &::after {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+    
+    .footer-links li .footer-link-btn:hover {
+      transform: translateX(0);
+    }
+    
+    .social-icons {
+      justify-content: center;
+    }
+    
+    .contact-info-footer {
+      .contact-item {
+        justify-content: center;
+        flex-wrap: wrap;
+        text-align: center;
+      }
+    }
+    
+    .footer-bottom {
+      .back-to-top-footer {
+        padding: 8px 20px;
+        font-size: 0.8rem;
+      }
+    }
+  }
+}

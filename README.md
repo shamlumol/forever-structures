@@ -1,70 +1,101 @@
-# Getting Started with Create React App
+# Forever Structures - Luxury Resort Construction Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Forever Structures](https://github.com/YOUR_USERNAME/forever-structures/blob/main/public/og-image.jpg?raw=true)
 
-## Available Scripts
+## Project Overview
 
-In the project directory, you can run:
+A premium, fully responsive website for **Forever Structures** - a luxury resort construction and real estate development company based in Vagamon, Kerala. The website showcases their portfolio, services, and projects with modern animations and interactive features.
 
-### `npm start`
+**Live Demo:** [https://foreverstructures.co.in](https://foreverstructures.co.in)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+-  **Cinematic Hero Section** - Video background with parallax effects
+-  **Custom Cursor** - Branded cursor with hover animations
+-  **Fully Responsive** - Mobile-first design, works on all devices
+-  **Image Gallery** - Pill-style gallery with upcoming/ongoing filters
+-  **Project Showcase** - Featured projects with modal details
+-  **Contact Form** - WhatsApp integration for instant inquiries
+-  **Smooth Navigation** - Scroll to sections with active highlighting
+-  **Animated UI** - Framer Motion animations throughout
+-  **Pagination** - Gallery images with page navigation
+-  **WhatsApp Integration** - Floating WhatsApp button for instant chat
 
-### `npm test`
+## Tech Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+ *Technology*
 
-### `npm run build`
+ React 18          |
+ SCSS, Bootstrap 5 |
+ Framer Motion     |
+ React Icons       |
+ React Router DOM  |
+ Create React App  |
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Project Structure
+forever-structures/
+├── public/
+│ ├── images/ # Project & gallery images
+│ └── videos/ # Hero background video
+├── src/
+│ ├── components/ # React components
+│ ├── data/ # Static data files
+│ ├── styles/ # SCSS files
+│ └── App.js # Main application
+└── package.json
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Color Palette
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Color	Hex	Usage
+Navy	#1C2A44	Primary background
+Orange	#F37412	Accent & highlights
+White	#F2F2F2	Text
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Responsive Breakpoints
+    
+Device	Breakpoint
+Mobile	< 768px
+Tablet	768px - 1024px
+Desktop	> 1024px
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+ ## Components Overview
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+*Component*       	*Description*
 
-### Code Splitting
+Hero	            Main landing section with video background
+About	            Company information and stats
+Services           	Three main service offerings
+Projects	        Featured projects grid
+Gallery	            Upcoming/ongoing projects with pill design
+Contact         	Contact form with WhatsApp integration
+Footer	            Navigation, social links, copyright
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Developer
 
-### Making a Progressive Web App
+**Shamlu Mol A K**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- Full Stack Developer
+[LinkedIn](https://linkedin.com/in/yourusername)|        
+<!-- [Portfolio](https://portfolio.com) -->
 
-### Advanced Configuration
+## Author
+Forever Structures
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Website: foreverstructures.co.in
 
-### Deployment
+Email: info@foreverstructures.co.in
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is proprietary and confidential. All rights reserved.
+
+
+
